@@ -52,16 +52,26 @@ class Permis
      */
     private $fileAttachementPermis;
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getNumero(): ?string
     {
         return $this->numero;
     }
 
+    /**
+     * @param string $numero
+     * @return $this
+     */
     public function setNumero(string $numero): self
     {
         $this->numero = $numero;
@@ -69,11 +79,18 @@ class Permis
         return $this;
     }
 
+    /**
+     * @return int|null
+     */
     public function getCodePermis(): ?int
     {
         return $this->code_permis;
     }
 
+    /**
+     * @param int|null $code_permis
+     * @return $this
+     */
     public function setCodePermis(?int $code_permis): self
     {
         $this->code_permis = $code_permis;
@@ -81,11 +98,18 @@ class Permis
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getDateDelivrance(): ?\DateTimeInterface
     {
         return $this->date_delivrance;
     }
 
+    /**
+     * @param \DateTimeInterface $date_delivrance
+     * @return $this
+     */
     public function setDateDelivrance(\DateTimeInterface $date_delivrance): self
     {
         $this->date_delivrance = $date_delivrance;
@@ -93,11 +117,18 @@ class Permis
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getDateExpiration(): ?\DateTimeInterface
     {
         return $this->date_expiration;
     }
 
+    /**
+     * @param \DateTimeInterface $date_expiration
+     * @return $this
+     */
     public function setDateExpiration(\DateTimeInterface $date_expiration): self
     {
         $this->date_expiration = $date_expiration;
@@ -105,11 +136,18 @@ class Permis
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getTypeVehicule(): ?string
     {
         return $this->type_vehicule;
     }
 
+    /**
+     * @param string $type_vehicule
+     * @return $this
+     */
     public function setTypeVehicule(string $type_vehicule): self
     {
         $this->type_vehicule = $type_vehicule;
@@ -117,11 +155,18 @@ class Permis
         return $this;
     }
 
+    /**
+     * @return Client|null
+     */
     public function getClient(): ?Client
     {
         return $this->client;
     }
 
+    /**
+     * @param Client $client
+     * @return $this
+     */
     public function setClient(Client $client): self
     {
         $this->client = $client;
@@ -129,11 +174,18 @@ class Permis
         return $this;
     }
 
+    /**
+     * @return FileAttachementClient|null
+     */
     public function getFileAttachementPermis(): ?FileAttachementClient
     {
         return $this->fileAttachementPermis;
     }
 
+    /**
+     * @param FileAttachementClient|null $fileAttachementPermis
+     * @return $this
+     */
     public function setFileAttachementPermis(?FileAttachementClient $fileAttachementPermis): self
     {
         $this->fileAttachementPermis = $fileAttachementPermis;
@@ -146,4 +198,13 @@ class Permis
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function __toString()
+    {
+        return $this->numero;
+    }
+
 }

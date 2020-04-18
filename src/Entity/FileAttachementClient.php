@@ -36,16 +36,26 @@ class FileAttachementClient
      */
     private $permis;
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getTitle(): ?string
     {
         return $this->title;
     }
 
+    /**
+     * @param string $title
+     * @return $this
+     */
     public function setTitle(string $title): self
     {
         $this->title = $title;
@@ -53,11 +63,18 @@ class FileAttachementClient
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getFileUrl(): ?string
     {
         return $this->file_url;
     }
 
+    /**
+     * @param string|null $file_url
+     * @return $this
+     */
     public function setFileUrl(?string $file_url): self
     {
         $this->file_url = $file_url;
@@ -65,11 +82,18 @@ class FileAttachementClient
         return $this;
     }
 
+    /**
+     * @return Client|null
+     */
     public function getClient(): ?Client
     {
         return $this->client;
     }
 
+    /**
+     * @param Client|null $client
+     * @return $this
+     */
     public function setClient(?Client $client): self
     {
         $this->client = $client;
@@ -77,15 +101,30 @@ class FileAttachementClient
         return $this;
     }
 
+    /**
+     * @return Permis|null
+     */
     public function getPermis(): ?Permis
     {
         return $this->permis;
     }
 
+    /**
+     * @param Permis|null $permis
+     * @return $this
+     */
     public function setPermis(?Permis $permis): self
     {
         $this->permis = $permis;
 
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function __toString()
+    {
+        return $this->title;
     }
 }

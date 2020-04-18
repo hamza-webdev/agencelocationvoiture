@@ -58,22 +58,35 @@ class Voiture
      */
     private $etatMajVoitures;
 
+    /**
+     * Voiture constructor.
+     */
     public function __construct()
     {
         $this->fileAttachementVoitures = new ArrayCollection();
         $this->etatMajVoitures = new ArrayCollection();
     }
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getNom(): ?string
     {
         return $this->nom;
     }
 
+    /**
+     * @param string $nom
+     * @return $this
+     */
     public function setNom(string $nom): self
     {
         $this->nom = $nom;
@@ -81,11 +94,18 @@ class Voiture
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getDescriptif(): ?string
     {
         return $this->descriptif;
     }
 
+    /**
+     * @param string|null $descriptif
+     * @return $this
+     */
     public function setDescriptif(?string $descriptif): self
     {
         $this->descriptif = $descriptif;
@@ -93,11 +113,18 @@ class Voiture
         return $this;
     }
 
+    /**
+     * @return Marque|null
+     */
     public function getMarque(): ?Marque
     {
         return $this->marque;
     }
 
+    /**
+     * @param Marque|null $marque
+     * @return $this
+     */
     public function setMarque(?Marque $marque): self
     {
         $this->marque = $marque;
@@ -105,11 +132,18 @@ class Voiture
         return $this;
     }
 
+    /**
+     * @return Carecteristiques|null
+     */
     public function getCarecteristique(): ?Carecteristiques
     {
         return $this->carecteristique;
     }
 
+    /**
+     * @param Carecteristiques|null $carecteristique
+     * @return $this
+     */
     public function setCarecteristique(?Carecteristiques $carecteristique): self
     {
         $this->carecteristique = $carecteristique;
@@ -117,11 +151,18 @@ class Voiture
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getNumeroPlaque(): ?string
     {
         return $this->numero_plaque;
     }
 
+    /**
+     * @param string $numero_plaque
+     * @return $this
+     */
     public function setNumeroPlaque(string $numero_plaque): self
     {
         $this->numero_plaque = $numero_plaque;
@@ -129,11 +170,18 @@ class Voiture
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getDateEnregistrement(): ?\DateTimeInterface
     {
         return $this->date_enregistrement;
     }
 
+    /**
+     * @param \DateTimeInterface|null $date_enregistrement
+     * @return $this
+     */
     public function setDateEnregistrement(?\DateTimeInterface $date_enregistrement): self
     {
         $this->date_enregistrement = $date_enregistrement;
@@ -149,6 +197,10 @@ class Voiture
         return $this->fileAttachementVoitures;
     }
 
+    /**
+     * @param FileAttachementVoiture $fileAttachementVoiture
+     * @return $this
+     */
     public function addFileAttachementVoiture(FileAttachementVoiture $fileAttachementVoiture): self
     {
         if (!$this->fileAttachementVoitures->contains($fileAttachementVoiture)) {
@@ -159,6 +211,10 @@ class Voiture
         return $this;
     }
 
+    /**
+     * @param FileAttachementVoiture $fileAttachementVoiture
+     * @return $this
+     */
     public function removeFileAttachementVoiture(FileAttachementVoiture $fileAttachementVoiture): self
     {
         if ($this->fileAttachementVoitures->contains($fileAttachementVoiture)) {
@@ -180,6 +236,10 @@ class Voiture
         return $this->etatMajVoitures;
     }
 
+    /**
+     * @param EtatMajVoiture $etatMajVoiture
+     * @return $this
+     */
     public function addEtatMajVoiture(EtatMajVoiture $etatMajVoiture): self
     {
         if (!$this->etatMajVoitures->contains($etatMajVoiture)) {
@@ -190,6 +250,10 @@ class Voiture
         return $this;
     }
 
+    /**
+     * @param EtatMajVoiture $etatMajVoiture
+     * @return $this
+     */
     public function removeEtatMajVoiture(EtatMajVoiture $etatMajVoiture): self
     {
         if ($this->etatMajVoitures->contains($etatMajVoiture)) {
@@ -201,5 +265,13 @@ class Voiture
         }
 
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function __toString()
+    {
+        return $this->nom;
     }
 }

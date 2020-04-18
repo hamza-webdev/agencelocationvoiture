@@ -46,16 +46,26 @@ class EtatMajVoiture
      */
     private $voiture;
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getDateEnregistrement(): ?\DateTimeInterface
     {
         return $this->date_enregistrement;
     }
 
+    /**
+     * @param \DateTimeInterface $date_enregistrement
+     * @return $this
+     */
     public function setDateEnregistrement(\DateTimeInterface $date_enregistrement): self
     {
         $this->date_enregistrement = $date_enregistrement;
@@ -63,11 +73,18 @@ class EtatMajVoiture
         return $this;
     }
 
+    /**
+     * @return int|null
+     */
     public function getKilometrage(): ?int
     {
         return $this->kilometrage;
     }
 
+    /**
+     * @param int $kilometrage
+     * @return $this
+     */
     public function setKilometrage(int $kilometrage): self
     {
         $this->kilometrage = $kilometrage;
@@ -75,11 +92,18 @@ class EtatMajVoiture
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getDescriptifVoiture(): ?string
     {
         return $this->descriptif_voiture;
     }
 
+    /**
+     * @param string|null $descriptif_voiture
+     * @return $this
+     */
     public function setDescriptifVoiture(?string $descriptif_voiture): self
     {
         $this->descriptif_voiture = $descriptif_voiture;
@@ -87,11 +111,18 @@ class EtatMajVoiture
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getDateControle(): ?\DateTimeInterface
     {
         return $this->date_controle;
     }
 
+    /**
+     * @param \DateTimeInterface|null $date_controle
+     * @return $this
+     */
     public function setDateControle(?\DateTimeInterface $date_controle): self
     {
         $this->date_controle = $date_controle;
@@ -99,11 +130,18 @@ class EtatMajVoiture
         return $this;
     }
 
+    /**
+     * @return bool|null
+     */
     public function getEtatVoiture(): ?bool
     {
         return $this->etat_voiture;
     }
 
+    /**
+     * @param bool|null $etat_voiture
+     * @return $this
+     */
     public function setEtatVoiture(?bool $etat_voiture): self
     {
         $this->etat_voiture = $etat_voiture;
@@ -111,15 +149,31 @@ class EtatMajVoiture
         return $this;
     }
 
+    /**
+     * @return Voiture|null
+     */
     public function getVoiture(): ?Voiture
     {
         return $this->voiture;
     }
 
+    /**
+     * @param Voiture|null $voiture
+     * @return $this
+     */
     public function setVoiture(?Voiture $voiture): self
     {
         $this->voiture = $voiture;
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function __toString()
+    {
+        return $this->kilometrage;
+    }
+
 }

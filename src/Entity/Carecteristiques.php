@@ -71,16 +71,26 @@ class Carecteristiques
      */
     private $voiture;
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getVersion(): ?string
     {
         return $this->version;
     }
 
+    /**
+     * @param string $version
+     * @return $this
+     */
     public function setVersion(string $version): self
     {
         $this->version = $version;
@@ -88,11 +98,18 @@ class Carecteristiques
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getCouleur(): ?string
     {
         return $this->couleur;
     }
 
+    /**
+     * @param string|null $couleur
+     * @return $this
+     */
     public function setCouleur(?string $couleur): self
     {
         $this->couleur = $couleur;
@@ -100,11 +117,18 @@ class Carecteristiques
         return $this;
     }
 
+    /**
+     * @return int|null
+     */
     public function getNbrePlace(): ?int
     {
         return $this->nbre_place;
     }
 
+    /**
+     * @param int|null $nbre_place
+     * @return $this
+     */
     public function setNbrePlace(?int $nbre_place): self
     {
         $this->nbre_place = $nbre_place;
@@ -112,11 +136,18 @@ class Carecteristiques
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getEnergie(): ?string
     {
         return $this->energie;
     }
 
+    /**
+     * @param string|null $energie
+     * @return $this
+     */
     public function setEnergie(?string $energie): self
     {
         $this->energie = $energie;
@@ -124,11 +155,18 @@ class Carecteristiques
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getBoiteVitesse(): ?string
     {
         return $this->boite_vitesse;
     }
 
+    /**
+     * @param string|null $boite_vitesse
+     * @return $this
+     */
     public function setBoiteVitesse(?string $boite_vitesse): self
     {
         $this->boite_vitesse = $boite_vitesse;
@@ -136,11 +174,18 @@ class Carecteristiques
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getPuissanceFiscale(): ?string
     {
         return $this->puissance_fiscale;
     }
 
+    /**
+     * @param string|null $puissance_fiscale
+     * @return $this
+     */
     public function setPuissanceFiscale(?string $puissance_fiscale): self
     {
         $this->puissance_fiscale = $puissance_fiscale;
@@ -148,11 +193,18 @@ class Carecteristiques
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getDateEnregistrement(): ?\DateTimeInterface
     {
         return $this->date_enregistrement;
     }
 
+    /**
+     * @param \DateTimeInterface|null $date_enregistrement
+     * @return $this
+     */
     public function setDateEnregistrement(?\DateTimeInterface $date_enregistrement): self
     {
         $this->date_enregistrement = $date_enregistrement;
@@ -160,11 +212,18 @@ class Carecteristiques
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getMoteur(): ?string
     {
         return $this->moteur;
     }
 
+    /**
+     * @param string|null $moteur
+     * @return $this
+     */
     public function setMoteur(?string $moteur): self
     {
         $this->moteur = $moteur;
@@ -172,11 +231,18 @@ class Carecteristiques
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getDescriptif(): ?string
     {
         return $this->descriptif;
     }
 
+    /**
+     * @param string|null $descriptif
+     * @return $this
+     */
     public function setDescriptif(?string $descriptif): self
     {
         $this->descriptif = $descriptif;
@@ -184,11 +250,18 @@ class Carecteristiques
         return $this;
     }
 
+    /**
+     * @return Modele|null
+     */
     public function getModele(): ?Modele
     {
         return $this->modele;
     }
 
+    /**
+     * @param Modele|null $modele
+     * @return $this
+     */
     public function setModele(?Modele $modele): self
     {
         $this->modele = $modele;
@@ -196,11 +269,18 @@ class Carecteristiques
         return $this;
     }
 
+    /**
+     * @return Voiture|null
+     */
     public function getVoiture(): ?Voiture
     {
         return $this->voiture;
     }
 
+    /**
+     * @param Voiture|null $voiture
+     * @return $this
+     */
     public function setVoiture(?Voiture $voiture): self
     {
         $this->voiture = $voiture;
@@ -213,4 +293,13 @@ class Carecteristiques
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function __toString()
+    {
+        return $this->version;
+    }
+
 }

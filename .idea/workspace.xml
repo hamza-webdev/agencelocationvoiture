@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ca90b953-cdd7-4505-a2d2-ec8452767915" name="Default Changelist" comment="" />
+    <list default="true" id="ca90b953-cdd7-4505-a2d2-ec8452767915" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/agencelocationvoiture.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/agencelocationvoiture.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Adresse.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Adresse.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Carecteristiques.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Carecteristiques.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/EtatMajVoiture.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/EtatMajVoiture.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FileAttachementClient.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FileAttachementClient.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FileAttachementVoiture.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FileAttachementVoiture.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Marque.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Marque.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Modele.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Modele.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Permis.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Permis.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Voiture.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Voiture.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +29,12 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="agencelocationvoiture" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -121,9 +144,12 @@
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-eventmanager" />
       <path value="$PROJECT_DIR$/vendor/zendframework/zend-code" />
+      <path value="$PROJECT_DIR$/vendor/pagerfanta/pagerfanta" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1aigEeqZ2gOWoPmbln8lpRVvqrp" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -132,8 +158,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="C:/wamp64/bin/php/php7.3.12/php.exe" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -145,7 +173,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1587223718154</updated>
-      <workItem from="1587223720833" duration="4846000" />
+      <workItem from="1587223720833" duration="11935000" />
     </task>
     <servers />
   </component>
@@ -153,6 +181,14 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="827" y="178" key="#com.intellij.ide.util.MemberChooser" timestamp="1587238039377">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="827" y="178" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587238039377" />
+    <state x="0" y="155" key="SettingsEditor" timestamp="1587231319697">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1587231319697" />
     <state x="793" y="300" key="com.intellij.ide.util.TipDialog" timestamp="1587223723952">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

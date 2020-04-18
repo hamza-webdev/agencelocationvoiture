@@ -1,6 +1,102 @@
-#easy_admin:
-#    entities:
-#        # List the entity class name you want to manage
-#        - App\Entity\Product
-#        - App\Entity\Category
-#        - App\Entity\User
+easy_admin:
+    site_name: 'Agence de location de voiture'
+    user:
+        display_name: true
+        display_avatar: true
+        # this method/property must return the string representation of the user
+        # (Symfony will look for getFullName(), isFullName(), ..., and 'fullName' property)
+        name_property_path: 'email'
+
+    design:
+        menu:
+            - {label: "Rubrique Voitures"}
+            - label: "Voiture"
+              children:
+                  - {entity: Voiture, label: "Voiture list", icon: "th-list"}
+                  - {entity: Voiture, label: "Add voiture", icon: "plus", params: {action: 'new'}}
+            - label: "Marque"
+              children:
+                  - {entity: Marque, label: "Marque list", icon: "th-list"}
+                  - {entity: Marque, label: "Add Marque", icon: "plus", params: {action: 'new'}}
+            - label: "Modele"
+              children:
+                  - {entity: Modele, label: "Modele list", icon: "th-list"}
+                  - {entity: Modele, label: "Add Modele", icon: "plus", params: {action: 'new'}}
+            - label: "EtatMajVoiture"
+              children:
+                  - {entity: EtatMajVoiture, label: "Etat Maj Voiture list", icon: "th-list"}
+                  - {entity: EtatMajVoiture, label: "Add Etat Maj Voiture", icon: "plus", params: {action: 'new'}}
+            - label: "Carecteristiques"
+              children:
+                  - {entity: Carecteristiques, label: "Carecteristiques list", icon: "th-list"}
+                  - {entity: Carecteristiques, label: "Add Carecteristiques", icon: "plus", params: {action: 'new'}}
+
+            - {label: "Rubrique Client"}
+            - label: "Client"
+              children:
+                  - {entity: Client, label: "Client list", icon: "th-list"}
+                  - {entity: Client, label: "Add Client", icon: "plus", params: {action: 'new'}}
+            - label: "Adresse"
+              children:
+                  - {entity: Adresse, label: "Adresse list", icon: "th-list"}
+                  - {entity: Adresse, label: "Add Adresse", icon: "plus", params: {action: 'new'}}
+            - label: "Permis"
+              children:
+                  - {entity: Permis, label: "Permis list", icon: "th-list"}
+                  - {entity: Permis, label: "Add Permis", icon: "plus", params: {action: 'new'}}
+            - label: "File Attachement Client"
+              children:
+                  - {entity: FileAttachementClient, label: "File Attachement Client list", icon: "th-list"}
+                  - {entity: FileAttachementClient, label: "Add File Attachement Client", icon: "plus", params: {action: 'new'}}
+            - {label: "Setting"}
+            - label: "User"
+              children:
+                  - {entity: User, label: "User list", icon: "users"}
+                  - {entity: User, label: "Add User", icon: "plus", params: {action: 'new'}}
+
+    entities:
+        Voiture:
+            class: App\Entity\Voiture
+            label: "Voiture"
+            form:
+                fields:
+                    - {type: 'group', icon: 'pencil', label: "Information de vehicule", css_class: 'col-lg-6'}
+                    - nom
+                    - numero_plaque
+                    - date_enregistrement
+                    - {property: 'descriptif', type: 'text-editor'}
+                    - {type: 'group', icon: 'pencil', label: "Information Externe", css_class: 'col-lg-6'}
+                    - marque
+                    - carecteristique
+                    - etatMajVoitures
+            edit:
+                fields:
+                    - '-date_enregistrement'
+            list:
+                collapse_actions: true
+                actions: ['show', 'edit', 'delete']
+                batch_actions: ['delete']
+                title: "Creer Vehicule voiture"
+                filters: ['nom', 'numero_plaque', 'marque', 'date_enregistrement']
+
+
+        Marque:
+            class: App\Entity\Marque
+        Modele:
+            class: App\Entity\Modele
+        Carecteristiques:
+            class: App\Entity\Carecteristiques
+        FileAttachementVoiture:
+            class: App\Entity\FileAttachementVoiture
+        EtatMajVoiture:
+            class: App\Entity\EtatMajVoiture
+        Client:
+            class: App\Entity\Client
+        Adresse:
+            class: App\Entity\Adresse
+        Permis:
+            class: App\Entity\Permis
+        FileAttachementClient:
+            class: App\Entity\FileAttachementClient
+        User:
+            class: App\Entity\User

@@ -38,21 +38,34 @@ class Modele
      */
     private $carecteristiques;
 
+    /**
+     * Modele constructor.
+     */
     public function __construct()
     {
         $this->carecteristiques = new ArrayCollection();
     }
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getName(): ?string
     {
         return $this->name;
     }
 
+    /**
+     * @param string $name
+     * @return $this
+     */
     public function setName(string $name): self
     {
         $this->name = $name;
@@ -60,11 +73,18 @@ class Modele
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getTitle(): ?string
     {
         return $this->title;
     }
 
+    /**
+     * @param string $title
+     * @return $this
+     */
     public function setTitle(string $title): self
     {
         $this->title = $title;
@@ -72,11 +92,18 @@ class Modele
         return $this;
     }
 
+    /**
+     * @return Marque|null
+     */
     public function getMarque(): ?Marque
     {
         return $this->marque;
     }
 
+    /**
+     * @param Marque|null $marque
+     * @return $this
+     */
     public function setMarque(?Marque $marque): self
     {
         $this->marque = $marque;
@@ -92,6 +119,10 @@ class Modele
         return $this->carecteristiques;
     }
 
+    /**
+     * @param Carecteristiques $carecteristique
+     * @return $this
+     */
     public function addCarecteristique(Carecteristiques $carecteristique): self
     {
         if (!$this->carecteristiques->contains($carecteristique)) {
@@ -102,6 +133,10 @@ class Modele
         return $this;
     }
 
+    /**
+     * @param Carecteristiques $carecteristique
+     * @return $this
+     */
     public function removeCarecteristique(Carecteristiques $carecteristique): self
     {
         if ($this->carecteristiques->contains($carecteristique)) {
@@ -114,4 +149,13 @@ class Modele
 
         return $this;
     }
+
+    /**
+     * @return mixed
+     */
+    public function __toString()
+    {
+        return $this->name;
+    }
+
 }

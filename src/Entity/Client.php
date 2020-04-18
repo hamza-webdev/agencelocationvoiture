@@ -78,21 +78,34 @@ class Client
      */
     private $fileAttachementClients;
 
+    /**
+     * Client constructor.
+     */
     public function __construct()
     {
         $this->fileAttachementClients = new ArrayCollection();
     }
 
+    /**
+     * @return int|null
+     */
     public function getId(): ?int
     {
         return $this->id;
     }
 
+    /**
+     * @return string|null
+     */
     public function getNom(): ?string
     {
         return $this->nom;
     }
 
+    /**
+     * @param string $nom
+     * @return $this
+     */
     public function setNom(string $nom): self
     {
         $this->nom = $nom;
@@ -100,11 +113,18 @@ class Client
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getPrenom(): ?string
     {
         return $this->prenom;
     }
 
+    /**
+     * @param string $prenom
+     * @return $this
+     */
     public function setPrenom(string $prenom): self
     {
         $this->prenom = $prenom;
@@ -112,11 +132,18 @@ class Client
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getDateNaissance(): ?\DateTimeInterface
     {
         return $this->date_naissance;
     }
 
+    /**
+     * @param \DateTimeInterface $date_naissance
+     * @return $this
+     */
     public function setDateNaissance(\DateTimeInterface $date_naissance): self
     {
         $this->date_naissance = $date_naissance;
@@ -124,11 +151,18 @@ class Client
         return $this;
     }
 
+    /**
+     * @return int|null
+     */
     public function getTelephone(): ?int
     {
         return $this->telephone;
     }
 
+    /**
+     * @param int|null $telephone
+     * @return $this
+     */
     public function setTelephone(?int $telephone): self
     {
         $this->telephone = $telephone;
@@ -136,11 +170,18 @@ class Client
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getEmail(): ?string
     {
         return $this->email;
     }
 
+    /**
+     * @param string|null $email
+     * @return $this
+     */
     public function setEmail(?string $email): self
     {
         $this->email = $email;
@@ -148,11 +189,18 @@ class Client
         return $this;
     }
 
+    /**
+     * @return int|null
+     */
     public function getCin(): ?int
     {
         return $this->cin;
     }
 
+    /**
+     * @param int $cin
+     * @return $this
+     */
     public function setCin(int $cin): self
     {
         $this->cin = $cin;
@@ -160,11 +208,18 @@ class Client
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getNumPasseport(): ?string
     {
         return $this->num_passeport;
     }
 
+    /**
+     * @param string|null $num_passeport
+     * @return $this
+     */
     public function setNumPasseport(?string $num_passeport): self
     {
         $this->num_passeport = $num_passeport;
@@ -172,11 +227,18 @@ class Client
         return $this;
     }
 
+    /**
+     * @return string|null
+     */
     public function getPseudoname(): ?string
     {
         return $this->pseudoname;
     }
 
+    /**
+     * @param string|null $pseudoname
+     * @return $this
+     */
     public function setPseudoname(?string $pseudoname): self
     {
         $this->pseudoname = $pseudoname;
@@ -184,11 +246,18 @@ class Client
         return $this;
     }
 
+    /**
+     * @return Adresse|null
+     */
     public function getAdresse(): ?Adresse
     {
         return $this->adresse;
     }
 
+    /**
+     * @param Adresse|null $adresse
+     * @return $this
+     */
     public function setAdresse(?Adresse $adresse): self
     {
         $this->adresse = $adresse;
@@ -202,11 +271,18 @@ class Client
         return $this;
     }
 
+    /**
+     * @return \DateTimeInterface|null
+     */
     public function getDateInscription(): ?\DateTimeInterface
     {
         return $this->date_inscription;
     }
 
+    /**
+     * @param \DateTimeInterface $date_inscription
+     * @return $this
+     */
     public function setDateInscription(\DateTimeInterface $date_inscription): self
     {
         $this->date_inscription = $date_inscription;
@@ -214,11 +290,18 @@ class Client
         return $this;
     }
 
+    /**
+     * @return Permis|null
+     */
     public function getPermis(): ?Permis
     {
         return $this->permis;
     }
 
+    /**
+     * @param Permis $permis
+     * @return $this
+     */
     public function setPermis(Permis $permis): self
     {
         $this->permis = $permis;
@@ -239,6 +322,10 @@ class Client
         return $this->fileAttachementClients;
     }
 
+    /**
+     * @param FileAttachementClient $fileAttachementClient
+     * @return $this
+     */
     public function addFileAttachementClient(FileAttachementClient $fileAttachementClient): self
     {
         if (!$this->fileAttachementClients->contains($fileAttachementClient)) {
@@ -249,6 +336,10 @@ class Client
         return $this;
     }
 
+    /**
+     * @param FileAttachementClient $fileAttachementClient
+     * @return $this
+     */
     public function removeFileAttachementClient(FileAttachementClient $fileAttachementClient): self
     {
         if ($this->fileAttachementClients->contains($fileAttachementClient)) {
@@ -260,5 +351,13 @@ class Client
         }
 
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function __toString()
+    {
+        return $this->nom;
     }
 }
