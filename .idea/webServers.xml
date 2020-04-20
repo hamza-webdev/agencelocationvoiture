@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="c0090562-aa21-46c1-b4f5-68172d1fa12e" name="lws_ecole" url="http://ecole.bedwihamza.com">
+        <fileTransfer host="ftp.bedwihamza.com" port="21" rootFolder="/public_html/ecole">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

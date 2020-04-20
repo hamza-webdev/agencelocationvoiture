@@ -1,0 +1,7 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        voiture_thumbnails:
+            uri_prefix: '%file_attachement_voiture%'
+            upload_destination: '%kernel.project_dir%/public/%file_attachement_voiture%'
