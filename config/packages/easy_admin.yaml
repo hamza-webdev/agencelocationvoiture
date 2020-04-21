@@ -6,7 +6,6 @@ easy_admin:
         # this method/property must return the string representation of the user
         # (Symfony will look for getFullName(), isFullName(), ..., and 'fullName' property)
         name_property_path: 'email'
-
     design:
         menu:
             - {label: "Rubrique Voitures"}
@@ -53,7 +52,6 @@ easy_admin:
               children:
                   - {entity: User, label: "User list", icon: "users"}
                   - {entity: User, label: "Add User", icon: "plus", params: {action: 'new'}}
-
     entities:
         Voiture:
             class: App\Entity\Voiture
@@ -68,11 +66,10 @@ easy_admin:
                     - {type: 'group', icon: 'pencil', label: "Information Externe", css_class: 'col-lg-6'}
                     - marque
                     - carecteristique
-                    - etatMajVoitures
+                    - {property: 'optionsVoitures', type: 'App\Form\OptionVoitureType' }
                     - {type: 'group', icon: 'clip', label: "Attachement", css_class: 'col-lg-10'}
                     - {property: 'thumbnailFile', type: 'vich_image'}
                     - {property: 'fileAttachementVoitures', type: 'collection', type_options: {entry_type: 'App\Form\FileAttachementVoitureType', by_reference: false}}
-
             edit:
                 fields:
                     - '-date_enregistrement'
@@ -83,7 +80,6 @@ easy_admin:
                 title: "Creer Vehicule voiture"
                 filters: ['nom', 'numero_plaque', 'marque', 'date_enregistrement']
                 fields: ['id', 'nom', 'marque', 'numero_plaque', 'date_enregistrement', {property: 'thumbnail', type: 'image', base_path: '%file_attachement_voiture%'}]
-
             show:
                 fields:
                     - nom
@@ -92,7 +88,7 @@ easy_admin:
                     - {property: 'descriptif', type: 'raw'}
                     - marque
                     - carecteristique
-                    - etatMajVoitures
+                    - optionsVoitures
                     - {property: 'thumbnail', type: 'image', base_path: '%file_attachement_voiture%'}
                     - {property: 'fileAttachementVoitures', template: 'image_voiture.html.twig'}
 

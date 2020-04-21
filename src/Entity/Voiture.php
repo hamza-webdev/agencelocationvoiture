@@ -82,6 +82,11 @@ class Voiture
     private $fileAttachementVoitures;
 
     /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\OptionsVoiture", mappedBy="voitures", cascade={"persist"})
+     */
+    private $optionsVoitures;
+
+    /**
      * Voiture constructor.
      */
     public function __construct()
@@ -89,6 +94,7 @@ class Voiture
         $this->fileAttachementVoitures = new ArrayCollection();
         $this->etatMajVoitures = new ArrayCollection();
         $this->date_enregistrement = $this->createdAt = $this->createdAt = new \DateTime();
+        $this->optionsVoitures = new ArrayCollection();
     }
 
     /**
@@ -351,6 +357,34 @@ class Voiture
     {
         $this->thumbnailFile = $thumbnailFile;
         if($thumbnailFile) $this->updatedAt = new \DateTime();
+    }
+
+    /**
+     * @return Collection|OptionsVoiture[]
+     */
+    public function getOptionsVoitures(): Collection
+    {
+        return $this->optionsVoitures;
+    }
+
+    public function addOptionsVoiture(OptionsVoiture $optionsVoiture): self
+    {
+        if (!$this->optionsVoitures->contains($optionsVoiture)) {
+            $this->optionsVoitures[] = $optionsVoiture;
+            $optionsVoiture->addVoiture($this);
+        }
+
+        return $this;
+    }
+
+    public function removeOptionsVoiture(OptionsVoiture $optionsVoiture): self
+    {
+        if ($this->optionsVoitures->contains($optionsVoiture)) {
+            $this->optionsVoitures->removeElement($optionsVoiture);
+            $optionsVoiture->removeVoiture($this);
+        }
+
+        return $this;
     }
 
 }

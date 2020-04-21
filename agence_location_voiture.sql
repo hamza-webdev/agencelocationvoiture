@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 20 avr. 2020 à 16:43
+-- Généré le :  mar. 21 avr. 2020 à 15:36
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -131,13 +131,28 @@ DROP TABLE IF EXISTS `file_attachement_voiture`;
 CREATE TABLE IF NOT EXISTS `file_attachement_voiture` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `voiture_id` int(11) DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `file_url` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `date_enregistrement` datetime NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `descriptif` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) CHARACTER SET utf8 NOT NULL DEFAULT 'voiture',
+  `creat_at` datetime DEFAULT NULL,
+  `update_at` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `IDX_BB3C852A181A8BA` (`voiture_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `file_attachement_voiture`
+--
+
+INSERT INTO `file_attachement_voiture` (`id`, `voiture_id`, `name`, `descriptif`, `image`, `creat_at`, `update_at`) VALUES
+(1, 3, 'classe c', NULL, '878.jpeg', '2020-04-21 14:26:40', '2020-04-21 14:26:40'),
+(2, 3, 'classe c', NULL, '878.jpeg', '2020-04-21 14:43:38', '2020-04-21 14:43:38'),
+(3, 4, NULL, NULL, 'S7-modele--mercedes-cla-2[1].jpg', '2020-04-21 15:16:11', '2020-04-21 15:16:12'),
+(4, 3, NULL, NULL, 'mercedes-amg-cla-45s-4matic-2019-1-750x410[1].jpg', '2020-04-21 15:16:11', '2020-04-21 15:16:12'),
+(5, 4, NULL, NULL, 'mercedes.jpg', '2020-04-21 15:20:09', '2020-04-21 15:20:09'),
+(6, 4, NULL, NULL, 'mercedes-benz-classe-s-coupe-2017-cover-mobile-test[1].jpg', '2020-04-21 15:20:09', '2020-04-21 15:20:09'),
+(7, 5, NULL, NULL, 'S0-la-bmw-serie-8-arrive-en-concession-plaisir-de-conduite-avant-tout-573006[1].jpg', '2020-04-21 15:23:39', '2020-04-21 15:23:40'),
+(8, 5, NULL, NULL, 'BMW-M850i-xDrive-Coupe-06-750[1].jpg', '2020-04-21 15:23:39', '2020-04-21 15:23:40');
 
 -- --------------------------------------------------------
 
@@ -272,14 +287,18 @@ CREATE TABLE IF NOT EXISTS `voiture` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `UNIQ_E9E2810F9D788BD4` (`carecteristique_id`),
   KEY `IDX_E9E2810F4827B9B2` (`marque_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Déchargement des données de la table `voiture`
 --
 
 INSERT INTO `voiture` (`id`, `marque_id`, `carecteristique_id`, `nom`, `descriptif`, `numero_plaque`, `date_enregistrement`, `created_at`, `updated_at`, `thumbnail`) VALUES
-(1, 1, NULL, 'Citroen bordo', '<ul><li>turi</li><li>etyjetuk</li><li>etukek</li><li>etuk</li></ul>', 'DT-580-ME', '2015-01-21 20:00:00', NULL, '2020-04-19 18:54:50', '1.513518.6[1].jpg');
+(1, 1, NULL, 'Citroen bordo', '<ul><li>turi</li><li>etyjetuk</li><li>etukek</li><li>etuk</li></ul>', 'DT-580-ME', '2015-01-21 20:00:00', NULL, '2020-04-19 18:54:50', '1.513518.6[1].jpg'),
+(2, 3, NULL, 'el clio bh', '<ol><li>5 place</li><li>tourisme</li><li>radar de recule</li><li>clim</li></ol>', 'KK-879YT', '2020-04-21 11:59:00', '2020-04-21 12:01:02', '2020-04-21 12:01:03', '123.jpg'),
+(3, 4, NULL, 'el marechal', NULL, 'me-55-gg', '2020-04-21 14:21:00', '2020-04-21 14:26:39', '2020-04-21 14:26:40', '74.jpg'),
+(4, 4, NULL, 'el maestro', NULL, 'MA-55-BH', '2020-04-21 15:13:00', '2020-04-21 15:16:11', '2020-04-21 15:16:12', 'mercedes-classe-e-restylee-2020-01[1].jpg'),
+(5, 5, NULL, 'bayouma', NULL, 'bm-75-bw', '2020-04-21 15:20:00', '2020-04-21 15:23:39', '2020-04-21 15:23:40', 'cover-r4x3w1000-5b22971f81265-p90306631-highres-1-jpg[1].jpg');
 
 --
 -- Contraintes pour les tables déchargées
