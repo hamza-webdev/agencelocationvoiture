@@ -5,3 +5,8 @@ vich_uploader:
         voiture_thumbnails:
             uri_prefix: '%file_attachement_voiture%'
             upload_destination: '%kernel.project_dir%/public/%file_attachement_voiture%'
+
+        voiture_attachement:
+            uri_prefix: '%file_attachement_voiture%'
+            upload_destination: '%kernel.project_dir%/public/%file_attachement_voiture%'
+

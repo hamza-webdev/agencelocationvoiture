@@ -2,25 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca90b953-cdd7-4505-a2d2-ec8452767915" name="Default Changelist" comment="commit with phpstorm ..&#10;config easy-admin">
-      <change afterPath="$PROJECT_DIR$/.idea/copyright/Hamza.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vagrant.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/uploads/voitures/V3DImage[1].ashx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200419180457.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200419180612.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200419180700.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/agence_location_voiture.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/voitures/123.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/voitures/1578921418437[1].jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/voitures/22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/voitures/55.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/voitures/66.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/voitures/74.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/voitures/77.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/voitures/878.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/voitures/S7-modele--mercedes-cla-2[1].jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/voitures/mercedes-amg-cla-45s-4matic-2019-1-750x410[1].jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/voitures/mercedes-classe-e-restylee-2020-01[1].jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/FileAttachementVoitureType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migrations/Version20200421124538.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/image_voiture.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/voiture/image_voiture.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/agencelocationvoiture.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/agencelocationvoiture.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/easy_admin.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/easy_admin.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/FileAttachementVoiture.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/FileAttachementVoiture.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Voiture.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Voiture.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
@@ -179,6 +186,7 @@
       <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
       <path value="$PROJECT_DIR$/vendor/jms/metadata" />
       <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
     </include_path>
   </component>
   <component name="ProjectId" id="1aigEeqZ2gOWoPmbln8lpRVvqrp" />
@@ -201,8 +209,13 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ecole2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\agencelocationvoiture\templates" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -230,7 +243,7 @@
       <option name="presentableId" value="Default" />
       <updated>1587223718154</updated>
       <workItem from="1587223720833" duration="21108000" />
-      <workItem from="1587317109054" duration="4512000" />
+      <workItem from="1587317109054" duration="34206000" />
     </task>
     <servers>
       <GitHub url="https://github.com">
@@ -263,10 +276,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="330" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587256975980" />
-    <state x="827" y="178" key="#com.intellij.ide.util.MemberChooser" timestamp="1587319940681">
+    <state x="827" y="178" key="#com.intellij.ide.util.MemberChooser" timestamp="1587472962585">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="827" y="178" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587319940681" />
+    <state x="827" y="178" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1587472962585" />
     <state x="1023" y="226" key="#com.intellij.tools.ToolEditorDialog" timestamp="1587253691961">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -283,14 +296,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="456" y="247" key="DBNavigator.DatasetFilterDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587317124511" />
+    <state x="0" y="336" key="DBNavigator.MethodExecutionHistoryDialog" timestamp="1587400611349">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="336" key="DBNavigator.MethodExecutionHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587400611349" />
     <state x="688" y="287" key="DBNavigator.ObjectFactoryInputDialog" timestamp="1587255550428">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="688" y="287" key="DBNavigator.ObjectFactoryInputDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587255550428" />
-    <state x="166" y="163" width="1581" height="806" key="DirDiffDialog" timestamp="1587257062871">
+    <state x="234" y="122" width="1431" height="806" key="DirDiffDialog" timestamp="1587399339829">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="166" y="163" width="1581" height="806" key="DirDiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587257062871" />
+    <state x="234" y="122" width="1431" height="806" key="DirDiffDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1587399339829" />
     <state x="1002" y="224" key="FileChooserDialogImpl" timestamp="1587255998285">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -307,6 +324,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="654" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1587254499117" />
+    <state x="790" y="238" width="731" height="674" key="find.popup" timestamp="1587481956639">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="790" y="238" width="731" height="674" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1587481956639" />
     <state x="954" y="176" key="ftp.server.browser" timestamp="1587256018180">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -69,8 +69,9 @@ easy_admin:
                     - marque
                     - carecteristique
                     - etatMajVoitures
-                    - {type: 'group', icon: 'clip', label: "Attachement", css_class: 'col-lg-6'}
+                    - {type: 'group', icon: 'clip', label: "Attachement", css_class: 'col-lg-10'}
                     - {property: 'thumbnailFile', type: 'vich_image'}
+                    - {property: 'fileAttachementVoitures', type: 'collection', type_options: {entry_type: 'App\Form\FileAttachementVoitureType', by_reference: false}}
 
             edit:
                 fields:
@@ -93,6 +94,7 @@ easy_admin:
                     - carecteristique
                     - etatMajVoitures
                     - {property: 'thumbnail', type: 'image', base_path: '%file_attachement_voiture%'}
+                    - {property: 'fileAttachementVoitures', template: 'image_voiture.html.twig'}
 
 
         Marque:

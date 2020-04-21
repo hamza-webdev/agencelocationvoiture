@@ -52,11 +52,6 @@ class Voiture
     private $date_enregistrement;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\FileAttachementVoiture", mappedBy="voiture")
-     */
-    private $fileAttachementVoitures;
-
-    /**
      * @ORM\OneToMany(targetEntity="App\Entity\EtatMajVoiture", mappedBy="voiture")
      */
     private $etatMajVoitures;
@@ -80,6 +75,11 @@ class Voiture
      * @Vich\UploadableField(mapping="voiture_thumbnails", fileNameProperty="thumbnail")
      */
     private $thumbnailFile;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\FileAttachementVoiture", mappedBy="voiture", cascade={"persist"})
+     */
+    private $fileAttachementVoitures;
 
     /**
      * Voiture constructor.
